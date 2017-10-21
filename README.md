@@ -1,10 +1,13 @@
 # Simple Quick Note
 
-Google Chrome extension for quick notes with a characters' counting feature.
+- [Installation for developers (for Linux users)](#installation-for-developers-for-linux-users)
+- [Sources](#sources)
 
-![Simple Quick Note](images/screenshot.png)
+Chrome extension for quick notes with a characters' counting feature.
 
-## Installation (for Linux users)
+![Simple Quick Note](img/screenshot.png)
+
+## Installation for developers (for Linux users)
 
 1. Go to the `chrome://extensions`.
 2. Enable `Developer mode` checkbox.
@@ -13,4 +16,4 @@ Google Chrome extension for quick notes with a characters' counting feature.
 
 ## Sources
 
-- icon: http://www.iconarchive.com/show/crystal-clear-icons-by-everaldo/Action-edit-icon.html
+- icon: http://iconarchive.com/show/crystal-clear-icons-by-everaldo/Action-edit-icon.html
