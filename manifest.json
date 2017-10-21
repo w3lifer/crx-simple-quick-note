@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Simple Quick Note",
   "description": "Simple extension for quick notes with a characters' counting feature",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "icons": {
     "16": "img/16x16.png",
     "48": "img/48x48.png",
