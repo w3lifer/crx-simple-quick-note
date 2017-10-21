@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+textarea {
+  display: block;
+  height: 200px;
+  width: 160px;
+  outline: 0;
+}
+
+input[type="reset"] {
+  float: right;
+  margin: 7px 0;
+}
+
+output {
+  display: block;
+  margin: 10px 0;
+}

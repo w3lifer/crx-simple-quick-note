@@ -1,15 +1,20 @@
 {
   "manifest_version": 2,
   "name": "Simple Quick Note",
-  "version": "1.0",
+  "description": "Simple extension for the quick notes",
+  "version": "1.0.1",
   "icons": {
-    "128": "images/icons/note-128x128.png",
-    "48": "images/icons/note-48x48.png",
-    "32": "images/icons/note-32x32.png",
-    "16": "images/icons/note-16x16.png"
+    "16": "img/16x16.png",
+    "48": "img/48x48.png",
+    "128": "img/128x128.png"
   },
   "browser_action": {
-    "default_icon": "images/icons/note-16x16.png",
+    "default_icon": {
+      "16": "img/16x16.png",
+      "48": "img/48x48.png",
+      "128": "img/128x128.png"
+    },
+    "default_title": "Simple Quick Note",
     "default_popup": "popup.html"
   },
   "permissions": [
