@@ -1,19 +1,24 @@
 ;'use strict';
 
+/* global chrome */
+
 window.addEventListener('DOMContentLoaded', function () {
 
   var ext = {
 
-    inputField: document.querySelector('textarea'),
-    resetButton: document.querySelector('input[type=reset]'),
+    textarea:            document.querySelector('textarea'),
+    copyButton:          document.getElementById('copy-button'),
+    cutButton:           document.getElementById('cut-button'),
+    resetButton:         document.getElementById('reset-button'),
     outputLengthElement: document.querySelector('output'),
+
     noteLength: 0,
     storage: chrome.storage.sync,
 
     bootstrap: function () {
       this.storage.get(function (data) {
         if (data.note) {
-          ext.inputField.value = data.note;
+          ext.textarea.value = data.note;
         }
         ext._setLength();
         ext._setBadgeText();
@@ -22,13 +27,13 @@ window.addEventListener('DOMContentLoaded', function () {
     },
 
     updateNote: function () {
-      ext.storage.set({'note': ext.inputField.value});
+      ext.storage.set({'note': ext.textarea.value});
       ext._setLength();
       ext._setBadgeText();
     },
 
     _setLength: function () {
-      ext.noteLength = ext.inputField.value.length;
+      ext.noteLength = ext.textarea.value.length;
       ext.outputLengthElement.textContent = ext.noteLength;
     },
 
@@ -42,13 +47,31 @@ window.addEventListener('DOMContentLoaded', function () {
 
   ext.bootstrap();
 
-  ext.inputField.addEventListener('input', function () {
+  ext.textarea.addEventListener('input', function () {
     ext.updateNote();
   });
 
+  ext.copyButton.addEventListener('click', function () {
+    copyTextToClipboard(ext.textarea.value);
+  });
+
+  ext.cutButton.addEventListener('click', function () {
+    copyTextToClipboard(ext.textarea.value);
+    ext.resetButton.click();
+  });
+
   ext.resetButton.addEventListener('click', function () {
-    ext.inputField.value = '';
+    ext.textarea.value = '';
     ext.updateNote();
   });
+
+  function copyTextToClipboard(text) {
+    var textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  }
 
 });

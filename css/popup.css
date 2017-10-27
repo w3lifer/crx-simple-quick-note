@@ -3,13 +3,17 @@
 textarea {
   display: block;
   height: 200px;
-  width: 160px;
+  width: 180px;
   outline: 0;
 }
 
-input[type="reset"] {
+button {
   float: right;
   margin: 7px 0;
+}
+
+button:not(:last-child) {
+  margin-right: 2px;
 }
 
 output {
