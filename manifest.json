@@ -17,6 +17,10 @@
     "default_title": "Simple Quick Note",
     "default_popup": "popup.html"
   },
+  "background": {
+    "persistent": false,
+    "scripts": ["js/events.js"]
+  },
   "permissions": [
     "storage"
   ]
