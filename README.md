@@ -5,7 +5,7 @@
 
 Chrome extension for quick notes with a characters' counting feature.
 
-![Simple Quick Note](img/screenshot-1280x800.png)
+![Simple Quick Note](img/screenshots/1.png)
 
 ## Installation for developers (for Linux users)
 

@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', function () {
         ext._setLength();
         ext._setBadgeText();
       });
-      chrome.browserAction.setBadgeBackgroundColor({'color': '#ef1322'});
+      chrome.browserAction.setBadgeBackgroundColor({'color': '#f48282'});
     },
 
     updateNote: function () {
