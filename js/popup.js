@@ -16,14 +16,18 @@ window.addEventListener('DOMContentLoaded', function () {
     storage: chrome.storage.sync,
 
     bootstrap: function () {
-      this.storage.get(function (data) {
-        if (data.note) {
-          ext.textarea.value = data.note;
+      this.storage.get(function (storage) {
+        const height = (storage.textarea && storage.textarea.height) || TEXTAREA.height;
+        const width = (storage.textarea && storage.textarea.width) || TEXTAREA.width;
+        ext.textarea.style.height = height + 'px';
+        ext.textarea.style.width = width + 'px';
+        if (storage.note) {
+          ext.textarea.value = storage.note;
         }
         ext._setLength();
         ext._setBadgeText();
       });
-      chrome.browserAction.setBadgeBackgroundColor({'color': '#f48282'});
+      chrome.browserAction.setBadgeBackgroundColor({'color': '#ef1322'});
     },
 
     updateNote: function () {

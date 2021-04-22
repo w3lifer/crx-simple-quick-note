@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Options</title>
+  <style>
+    body {
+      font-size: 16px;
+      width: 400px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    li label {
+      vertical-align: middle;
+    }
+
+    li input {
+      width: 100px;
+      text-align: center;
+    }
+
+  </style>
+  <script src="../js/common.js"></script>
+  <script src="../js/options.js"></script>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Size of textarea</legend>
+      <ul>
+        <li>
+          <label for="textarea-height">Height</label>
+          <span>
+            <input type="number" max="550" id="textarea-height"> px
+          </span>
+        </li>
+        <li>
+          <label for="textarea-width">Width</label>
+          <span>
+            <input type="number" min="550" id="textarea-width"> px
+          </span>
+        </li>
+      </ul>
+    </fieldset>
+  </form>
+</body>
+</html>
