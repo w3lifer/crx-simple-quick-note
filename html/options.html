@@ -30,12 +30,20 @@
       text-align: center;
     }
 
+    p {
+      color: #f00;
+      font-size: 13px;
+    }
+
+    #close-button {
+      cursor: pointer;
+    }
   </style>
   <script src="../js/common.js"></script>
   <script src="../js/options.js"></script>
 </head>
 <body>
-  <form>
+  <form novalidate>
     <fieldset>
       <legend>Size of textarea</legend>
       <ul>
@@ -53,6 +61,8 @@
         </li>
       </ul>
     </fieldset>
+    <p>Data is saved automatically</p>
+    <button id="close-button">Close</button>
   </form>
 </body>
 </html>
