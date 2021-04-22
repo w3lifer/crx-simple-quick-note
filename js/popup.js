@@ -25,27 +25,21 @@ window.addEventListener('DOMContentLoaded', function () {
           ext.textarea.value = storage.note;
         }
         ext._setLength();
-        ext._setBadgeText();
+        setBadge(ext.textarea.value);
       });
-      chrome.browserAction.setBadgeBackgroundColor({'color': '#fc2323'});
+
     },
 
     updateNote: function () {
       ext.storage.set({'note': ext.textarea.value});
       ext._setLength();
-      ext._setBadgeText();
+      setBadge(ext.textarea.value);
     },
 
     _setLength: function () {
       ext.noteLength = ext.textarea.value.length;
       ext.outputLengthElement.textContent = ext.noteLength;
     },
-
-    _setBadgeText: function () {
-      chrome.browserAction.setBadgeText({
-        'text': ext.noteLength ? String(ext.noteLength) : ''
-      });
-    }
 
   };
 
