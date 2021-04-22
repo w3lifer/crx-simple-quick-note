@@ -14,21 +14,18 @@ window.addEventListener('DOMContentLoaded', function () {
     textareaWidthElement.value = width;
   });
 
-  textareaHeightElement.addEventListener('input', function (e) {
-    chrome.storage.sync.get('textarea', function (storage) {
-      let data = {height: e.target.value};
-      data.width = (storage.textarea && storage.textarea.width) || TEXTAREA.width;
-      chrome.storage.sync.set({textarea: data});
-    });
-  });
+  textareaHeightElement.addEventListener('input', saveSizeOfTextarea.bind(null, 'height', 'width'));
 
-  textareaWidthElement.addEventListener('input', function (e) {
+  textareaWidthElement.addEventListener('input', saveSizeOfTextarea.bind(null, 'width', 'height'));
+
+  function saveSizeOfTextarea(axis1, axis2, e) {
     chrome.storage.sync.get('textarea', function (storage) {
-      let data = {width: e.target.value};
-      data.height = (storage.textarea && storage.textarea.height) || TEXTAREA.height;
+      let data = {};
+      data[axis1] = e.target.value;
+      data[axis2] = (storage.textarea && storage.textarea[axis2]) || TEXTAREA[axis2];
       chrome.storage.sync.set({textarea: data});
     });
-  });
+  }
 
   document
     .getElementById('close-button')
