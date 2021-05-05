@@ -21,8 +21,10 @@
 3. Click on the `Load unpacked` button.
 4. Select the extension directory.
 
+---
+
 ## Sources
 
 ### Icons
 
-- http://iconarchive.com/show/crystal-clear-icons-by-everaldo/Action-edit-icon.html
+- https://iconarchive.com/show/crystal-clear-icons-by-everaldo/action-edit-icon.html
