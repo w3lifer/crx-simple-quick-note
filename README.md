@@ -2,12 +2,17 @@
 
 - [Installation for developers (for Linux users)](#installation-for-developers-for-linux-users)
 - [Sources](#sources)
+  - [Icons](#icons)
 
-Chrome extension for quick notes with a characters' counting feature.
+---
 
 ![Simple Quick Note - Appearance](img/screenshots/1280x800/appearance.png)
 
+---
+
 ![Simple Quick Note - Options](img/screenshots/1280x800/options.png)
+
+---
 
 ## Installation for developers (for Linux users)
 
@@ -18,4 +23,6 @@ Chrome extension for quick notes with a characters' counting feature.
 
 ## Sources
 
-- icon: http://iconarchive.com/show/crystal-clear-icons-by-everaldo/Action-edit-icon.html
+### Icons
+
+- http://iconarchive.com/show/crystal-clear-icons-by-everaldo/Action-edit-icon.html
