@@ -5,9 +5,9 @@
 
 Chrome extension for quick notes with a characters' counting feature.
 
-![Simple Quick Note - Appearance](img/screenshots/appearance.png)
+![Simple Quick Note - Appearance](img/screenshots/1280x800/appearance.png)
 
-![Simple Quick Note - Options](img/screenshots/options.png)
+![Simple Quick Note - Options](img/screenshots/1280x800/options.png)
 
 ## Installation for developers (for Linux users)
 
