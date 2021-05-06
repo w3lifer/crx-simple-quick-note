@@ -27,4 +27,4 @@
 
 ### Icons
 
-- https://iconarchive.com/show/crystal-clear-icons-by-everaldo/action-edit-icon.html
+- [Action edit Icon](https://iconarchive.com/show/crystal-clear-icons-by-everaldo/action-edit-icon.html)
